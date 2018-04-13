@@ -17,8 +17,10 @@ $('document').ready(function () {
         // else if song text box is blank then alert user to enter song.
         // else proceeed
 
+        var mykey = config.MY_KEY;
+
         // Main part of the API URL for Last.FM
-        var _queryUrl = "http://ws.audioscrobbler.com/2.0/?method=track.getinfo&api_key=4d87768072faff4ea2d4a189cfbe7115&format=json&artist="
+        var _queryUrl = "http://ws.audioscrobbler.com/2.0/?method=track.getinfo&api_key=" + mykey + "&format=json&artist="
 
         if (inputArtist.value.length == 0) {
             // No text in the artist textbox. Send alert.
